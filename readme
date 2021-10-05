@@ -4,7 +4,7 @@ OVERVIEW OF FUNCTIONS AND USAGE
 
 This program has three methods of scanning addresses on a network. The default scan option will attempt every possible 10.x.x.x address on a network and report back if it can establish a connection. This takes a VERY long time. The full scan option will scan a given address to see if 14 of the most commonly attacked ports are open. This option also generates a report that will offer insight into the open ports and solutions to help keep them secure. The final scan type is the selected scan. This scan option will scan a given address for a given port and report back if it is open. 
 
-Usage is ./Port-scan -[h,d,s,f,] -[a,p] [string]
+Usage is ./Port-scan -[a,p] [string] -[h,d,s,f,]
 -h will open a help menu 
 -d signifies a default scan
 -s signifies a select scan
@@ -14,10 +14,10 @@ Usage is ./Port-scan -[h,d,s,f,] -[a,p] [string]
 
 Example usage 
 Full scan
-./Port-scan -f -a 10.0.0.1
+./Port-scan -a 10.0.0.1 -f
 
 Select scan
-./Port-scan -s -a 10.0.0.1 -p 80
+./Port-scan -a 10.0.0.1 -p 80 -s
 
 Default
 ./Port-scan -d
