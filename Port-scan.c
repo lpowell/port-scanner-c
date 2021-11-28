@@ -155,7 +155,7 @@ void fullScan(char *address){
 	mkdir("Scans", 0777);
 
 	// combine the filename and time var into the filenmame variable
-	snprintf(fileName, sizeof(fileName), "Scans/Scan Report %s.txt", asctime(gmtime(&t)));
+	snprintf(fileName, sizeof(fileName), "Scans/Scan Report %s.txt", asctime(localtime(&t)));
 
 	// create the file the scan report will go in
 	FILE *f = fopen(fileName, "a");
